@@ -1,12 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    :root {
+      --macabi-blue: #143a84;
+      --macabi-magenta: #d625a1ff;
+      --macabi-dark-magenta: #b01582;
+      --macabi-blue-gray: #c3d1e2;
+    }
+
+    @font-face {
+      font-family: 'Heebo';
+      src: url(/Heebo.ttf) format("truetype");
+    }
+
+    html {
+      direction: rtl;
+      box-sizing: border-box;
+      font-family: 'Heebo';
+    }
+
+    body {
+      background-color: #f2f2f2ff;
+      margin: 20px;
+      font-size: 16px;
+      line-height: 23px;
+    }
+
+    .head {
+      padding: 20px;
+    }
+
+    .wrapper {
+      box-sizing: border-box;
+      max-width: 546px;
+      margin: 0 auto;
+    }
+
+    .inner {
+      background-color: white;
+    }
+
+    .diabetes-items {
+      width: 100%;
+    }
+
+    .main-content {
+      text-align: center;
+    }
+
+    .primary-message {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 13px 0 20px;
+      padding: 20px;
+      color: var(--macabi-blue);
+    }
+
+    .greeting {
+      display: block;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .treatment-benefits {
+      padding: 0 20px;
+      margin-bottom: 20px;
+    }
+
+    .solutions-introduction {
+      color: white;
+      font-weight: 500;
+      padding: 20px;
+      background-color: var(--macabi-blue);
+    }
+
+    .solutions {
+      padding: 20px;
+    }
+
+    .dietitan {
+      padding: 20px 0 40px;
+    }
+
+    .dietitan .cta {
+      margin-bottom: 40px;
+    }
+
+    .dietitan .cta-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--macabi-blue);
+      margin-bottom: 15px;
+    }
+
+    .cta-btn {
+      font-family: inherit;
+      background-color: var(--macabi-magenta);
+      border: none;
+      color: white;
+      font-weight: 500;
+      padding: 8px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .cta-btn:hover {
+      background-color: var(--macabi-dark-magenta);
+    }
+
+    .dietitan .solution-title {
+      font-weight: 600;
+      color: var(--macabi-blue);
+    }
     
-  <h1>Hello</h1>
+    .dietitan .solution-description {
+      margin: 0 auto;
+      max-width: 429px;
+    }
+
+    .nurse,
+    .physiotherapist {
+      display: flex;
+      font-size: 14px;
+      margin-bottom: 20px;
+      align-items: center;
+      border: solid 1px var(--macabi-blue-gray);
+      border-radius: 40px;
+    }
+
+    .nurse .solution,
+    .physiotherapist .solution {
+      flex: 5;
+      padding: 25px;
+      text-align: right;
+      border-left: solid 1px var(--macabi-blue-gray);
+      line-height: 19px;
+    }
+
+    .nurse .solution-title,
+    .physiotherapist .solution-title {
+      color: var(--macabi-blue);
+      font-weight: 700;
+    }
+
+    .dietitan .solution-description p:last-child,
+    .nurse .solution-description p:last-child,
+    .physiotherapist .solution-description p:last-child {
+      margin-bottom: 0;
+    }
+
+    .nurse .cta,
+    .physiotherapist .cta {
+      flex: 3;
+      padding: 25px;
+    }
+
+    .nurse .cta-title,
+    .physiotherapist .cta-title {
+      font-weight: 500;
+      margin-bottom: 10px;
+      line-height: 18px;
+    }
+
+    .guide {
+      text-align: right;
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    .guide .title {
+      font-weight: 700;
+      color: var(--macabi-blue);
+    }
+
+    .guide-link {
+      color: var(--macabi-magenta);
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .closing-message {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--macabi-blue);
+      padding: 20px;
+      text-align: right;
+      line-height: 19px;
+    }
+
+    @media screen and (max-width: 482px) {
+      .primary-message {
+        padding: 10px;
+        font-size: 20px;
+      }
+
+      .nurse, .physiotherapist {
+        border-radius: 20px;
+        flex-direction: column;
+      }
+
+      .nurse .solution,
+      .physiotherapist .solution {
+        padding: 15px;
+        border-left: none;
+        border-bottom: solid 1px var(--macabi-blue-gray);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="inner">
+
+      <div class="head">
+        <img class="macabi-logo" src="./logo.png" alt="לוגו מכבי">
+      </div>
+
+      <img class="diabetes-items" src="./diabetes-items.jpg" alt="פריטים בנושא מחלת הסכרת">
+
+      <div class="main-content">
+
+        <div class="primary-message">
+          <span class="greeting">שלום רב,</span>
+          נתונים הנמצאים בתיק הרפואי שלך<br>מעידים על קיומה של סוכרת.
+        </div>
+
+        <div class="treatment-benefits">
+          טיפול נכון ואיזון הסוכרת כבר בשלבים הראשונים, יפחיתו באופן משמעותי את הסיכון לסיבוכים ולהחמרת הסוכרת בעתיד.
+        </div>
+
+        <div class="solutions-introduction">
+          המומחים של מכבי כאן כדי לבנות יחד איתך תכנית המותאמת לסדר היום הייחודי שלך, להעדפות האישיות שלך ולצרכים
+          המשתנים שלך.
+        </div>
+
+        <div class="solutions">
+
+          <div class="dietitan">
+            <div class="cta">
+              <div class="cta-title">הדיאטנית של מכבי מחכה לך!</div>
+              <button href="#" class="cta-btn">לקביעת תור</button>
+            </div>
+            <div class="solution">
+              <div class="solution-title">פגישת ייעוץ עם דיאטנית</div>
+              <div class="solution-description">
+                <p>דיאטנית בעלת ניסיון עשיר בטיפול בסוכרת תסייע לך בבניית תפריט אישי, המתאים לסדר היום שלך, למצבך הבריאותי ולהעדפות המזון שלך.</p>
+                <p>בשיחת הייעוץ, תציג הדיאטנית מידע מקצועי עדכני בנוגע לדרכי ההתמודדות עם הסוכרת, ותעניק לך כלים ייחודיים שסייעו לחולי סוכרת רבים לאמץ הרגלי אכילה נכונים לאורך זמן.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="nurse">
+            <div class="solution">
+              <div class="solution-title">למה חשוב להיפגש עם האחות?</div>
+              <div class="solution-description">
+                <p>אחות בעלת הכשרה בטיפול בסוכרת, תציג את מטרות הטיפול הרפואי ותסביר לך כיצד אפשר למנוע את סיבוכי הסוכרת.</p>
+                <p>האחות תדריך אותך כיצד לבצע באופן עצמאי מדידת סוכר בדם, תבצע בדיקת כפות רגליים, ותמשיך ללוות אותך בתהליך.</p>
+              </div>
+            </div>
+            <div class="cta">
+              <div class="cta-title">אחות מכבי מזמינה אותך להדרכה ולבדיקת כפות רגליים</div>
+              <button href="#" class="cta-btn">לקביעת תור</button>
+            </div>
+          </div>
+
+          <div class="physiotherapist">
+            <div class="solution">
+              <div class="solution-title">ייעוץ לפעילות גופנית אצל פיזיותרפיסט</div>
+              <div class="solution-description">
+                <p>לפעילות גופנית קבועה, תוך הפחתה של משך זמן הישיבה במהלך היום, יש תרומה משמעותית לאיזון ואף להורדה של רמות הסוכר בדם.</p>
+                <p>פיזיותרפיסטים שעברו הכשרה בבניית תכניות אימון לחולי סוכרת, זמינים עבורך לבניית תכנית אימון מותאמת אישית, וילוו אותך גם בהמשך התהליך.</p>
+              </div>
+            </div>
+            <div class="cta">
+              <div class="cta-title">בניית תכנית פעילות גופנית עם פיזיותרפיסט</div>
+              <button href="#" class="cta-btn">לקביעת תור</button>
+            </div>
+          </div>
+
+          <div class="guide">
+            <div class="title">אתם שואלים - אנחנו עונים</div>
+            <p class="description">ריכזנו את כל השאלות הנפוצות שהופנו לצוות הרפואי שלנו מחברי מכבי עם סוכרת, והפכנו אותן למדריך מקיף ומעמיק – שייתן לך את כל המידע
+              ההכרחי בנושא <a href="#" class="guide-link">בלחיצה כאן.</a></p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="closing-message">
+      בכבוד רב,<br>מכבי שירותי בריאות
+    </div>
+  </div>
 </body>
+
 </html>
