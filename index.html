@@ -8,6 +8,7 @@
 
   <style>
     :root {
+      --light-gray: #f2f2f2ff;
       --macabi-blue: #143a84;
       --macabi-magenta: #d625a1ff;
       --macabi-dark-magenta: #b01582;
@@ -26,7 +27,7 @@
     }
 
     body {
-      background-color: #f2f2f2ff;
+      background-color: var(--light-gray);
       margin: 20px;
       font-size: 16px;
       line-height: 23px;
@@ -73,14 +74,14 @@
       margin-bottom: 30px;
     }
 
-    .solutions-introduction {
+    .treatments-introduction {
       color: white;
       font-weight: 500;
       padding: 20px;
       background-color: var(--macabi-blue);
     }
 
-    .solutions {
+    .treatments {
       padding: 20px;
     }
 
@@ -114,14 +115,13 @@
       background-color: var(--macabi-dark-magenta);
     }
 
-    .dietitan .solution-title {
+    .dietitan .treatment-title {
       font-weight: 600;
       color: var(--macabi-blue);
     }
     
-    .dietitan .solution-description {
+    .dietitan .treatment-description {
       margin: 0 auto;
-      max-width: 429px;
     }
 
     .nurse,
@@ -134,8 +134,8 @@
       border-radius: 40px;
     }
 
-    .nurse .solution,
-    .physiotherapist .solution {
+    .nurse .treatment,
+    .physiotherapist .treatment {
       flex: 5;
       padding: 25px;
       text-align: right;
@@ -143,15 +143,15 @@
       line-height: 19px;
     }
 
-    .nurse .solution-title,
-    .physiotherapist .solution-title {
+    .nurse .treatment-title,
+    .physiotherapist .treatment-title {
       color: var(--macabi-blue);
       font-weight: 700;
     }
 
-    .dietitan .solution-description p:last-child,
-    .nurse .solution-description p:last-child,
-    .physiotherapist .solution-description p:last-child {
+    .dietitan .treatment-description p:last-child,
+    .nurse .treatment-description p:last-child,
+    .physiotherapist .treatment-description p:last-child {
       margin-bottom: 0;
     }
 
@@ -197,12 +197,12 @@
 
     @media screen and (max-width: 482px) {
       .primary-message {
-        padding: 10px;
+        padding: 10px 0 15px;
         font-size: 20px;
       }
 
       .treatment-benefits,
-      .solutions-introduction  {
+      .treatments-introduction  {
         font-size: 14px;
         font-weight: 500;
       }
@@ -212,8 +212,8 @@
         flex-direction: column;
       }
 
-      .nurse .solution,
-      .physiotherapist .solution {
+      .nurse .treatment,
+      .physiotherapist .treatment {
         padding: 15px;
         border-left: none;
         border-bottom: solid 1px var(--macabi-blue-gray);
@@ -245,21 +245,21 @@
           טיפול נכון ואיזון הסוכרת כבר בשלבים הראשונים, יפחיתו באופן משמעותי את הסיכון לסיבוכים ולהחמרת הסוכרת בעתיד.
         </div>
 
-        <div class="solutions-introduction">
+        <div class="treatments-introduction">
           המומחים של מכבי כאן כדי לבנות יחד איתך תכנית המותאמת לסדר היום הייחודי שלך, להעדפות האישיות שלך ולצרכים
           המשתנים שלך.
         </div>
 
-        <div class="solutions">
+        <div class="treatments">
 
           <div class="dietitan">
             <div class="cta">
               <div class="cta-title">הדיאטנית של מכבי מחכה לך!</div>
               <button href="#" class="cta-btn">לקביעת תור</button>
             </div>
-            <div class="solution">
-              <div class="solution-title">פגישת ייעוץ עם דיאטנית</div>
-              <div class="solution-description">
+            <div class="treatment">
+              <div class="treatment-title">פגישת ייעוץ עם דיאטנית</div>
+              <div class="treatment-description">
                 <p>דיאטנית בעלת ניסיון עשיר בטיפול בסוכרת תסייע לך בבניית תפריט אישי, המתאים לסדר היום שלך, למצבך הבריאותי ולהעדפות המזון שלך.</p>
                 <p>בשיחת הייעוץ, תציג הדיאטנית מידע מקצועי עדכני בנוגע לדרכי ההתמודדות עם הסוכרת, ותעניק לך כלים ייחודיים שסייעו לחולי סוכרת רבים לאמץ הרגלי אכילה נכונים לאורך זמן.</p>
               </div>
@@ -267,9 +267,9 @@
           </div>
 
           <div class="nurse">
-            <div class="solution">
-              <div class="solution-title">למה חשוב להיפגש עם האחות?</div>
-              <div class="solution-description">
+            <div class="treatment">
+              <div class="treatment-title">למה חשוב להיפגש עם האחות?</div>
+              <div class="treatment-description">
                 <p>אחות בעלת הכשרה בטיפול בסוכרת, תציג את מטרות הטיפול הרפואי ותסביר לך כיצד אפשר למנוע את סיבוכי הסוכרת.</p>
                 <p>האחות תדריך אותך כיצד לבצע באופן עצמאי מדידת סוכר בדם, תבצע בדיקת כפות רגליים, ותמשיך ללוות אותך בתהליך.</p>
               </div>
@@ -281,9 +281,9 @@
           </div>
 
           <div class="physiotherapist">
-            <div class="solution">
-              <div class="solution-title">ייעוץ לפעילות גופנית אצל פיזיותרפיסט</div>
-              <div class="solution-description">
+            <div class="treatment">
+              <div class="treatment-title">ייעוץ לפעילות גופנית אצל פיזיותרפיסט</div>
+              <div class="treatment-description">
                 <p>לפעילות גופנית קבועה, תוך הפחתה של משך זמן הישיבה במהלך היום, יש תרומה משמעותית לאיזון ואף להורדה של רמות הסוכר בדם.</p>
                 <p>פיזיותרפיסטים שעברו הכשרה בבניית תכניות אימון לחולי סוכרת, זמינים עבורך לבניית תכנית אימון מותאמת אישית, וילוו אותך גם בהמשך התהליך.</p>
               </div>
